@@ -20,7 +20,7 @@ default: &default
 
 development:
   <<: *default
-  database: hours-tracker_development
+  database: ruby_template_development
   
 
 # Warning: The database defined as "test" will be erased and
