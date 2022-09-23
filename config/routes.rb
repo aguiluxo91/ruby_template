@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   # post 'users', to: 'users' 
   resources :users, except: [:new] # el resources te crea todas las rutas menos la de new que ya la hemos creado
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end
