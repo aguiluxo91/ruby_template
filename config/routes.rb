@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'about', to: 'pages#about'
+  get 'signup', to: 'users#new'
+  # post 'users', to: 'users' 
+  resources :users, except: [:new] # el resources te crea todas las rutas menos la de new que ya la hemos creado
 end
